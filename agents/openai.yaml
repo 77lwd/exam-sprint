@@ -1,0 +1,4 @@
+interface:
+  display_name: "期末突击复习助手"
+  short_description: "把课件和零散资料转成期末突击复习路线、速记清单和自测陪练。"
+  default_prompt: "用 exam-sprint 帮我根据这些课件做期末突击复习计划。"
