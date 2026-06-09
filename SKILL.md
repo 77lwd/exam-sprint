@@ -7,7 +7,7 @@ description: Emergency university exam preparation and final-exam sprint support
 
 ## Version
 
-Current version: 1.2
+Current version: 1.3
 
 ## Purpose
 
@@ -25,6 +25,8 @@ Help university students quickly understand incomplete, messy course materials w
 - When a symbol, acronym, or technical term first appears, explain it in plain language before using it as a formula shortcut.
 - When exam time is unknown, do not invent a 24-hour, 3-day, or 7-day route. Give a first 30-90 minute rescue task and ask for the missing time information.
 - Prefer "what to do now" over broad advice: name the question type, the first line to write, the template to apply, and the exact practice target when available.
+- Convert materials into a rescue artifact chain: material evidence -> rescue skeleton -> symbol and question-type cards -> practice task -> answer checking and repair.
+- Self-review substantial outputs from a zero-baseline student perspective before sending.
 - Do not spend several minutes recovering difficult files unless the user asks for fuller extraction or confirms a mode switch.
 
 ## Modes
@@ -51,19 +53,19 @@ Use **Deep Scan Mode** only when the user explicitly asks for complete extractio
 
 Prompt for a mode switch only when the mode materially changes quality or time cost:
 
-- A scan-first file gives too little evidence for Sprint Mode.
+- A scan-first file gives too little evidence for Rescue Teaching Mode.
 - The user's requested artifact requires all pages or all questions.
-- The user asks for more detail after a Sprint Mode first pass.
+- The user asks for more detail after a Rescue Teaching Mode first pass.
 - Deep Scan Mode is possible but tool support or scan quality is uncertain.
 
-Offer a concise two-option choice: continue Sprint Mode for a fast provisional artifact, or switch to Deep Scan Mode for fuller extraction with longer runtime.
+Offer a concise two-option choice: continue Rescue Teaching Mode for a fast provisional artifact, or switch to Deep Scan Mode for fuller extraction with longer runtime.
 
 ## Default Workflow
 
 1. Inventory the available materials.
 2. For PDFs, run the fast PDF handling rules below before ad hoc extraction.
-3. Infer the course structure from titles, sections, repeated terms, formulas, examples, diagrams, summaries, assignments, or past questions.
-4. Classify the course by exam-scoring type. See `references/course-types.md`.
+3. Build a rescue skeleton from titles, sections, repeated terms, formulas, examples, diagrams, summaries, assignments, or past questions. See `references/rescue-pipeline.md`.
+4. Classify the course by exam-scoring type. See `references/course-types.md`, then choose the matching rescue style from `references/subject-playbooks.md`.
 5. Rank topics by sprint priority. See `references/priority-rules.md`.
 6. Ask only essential missing questions: exam time, exam format, and target outcome.
 7. Choose the right output mode:
@@ -71,9 +73,22 @@ Offer a concise two-option choice: continue Sprint Mode for a fast provisional a
    - Sprint Planning Mode when the user gives remaining time or asks for scheduling.
    - Deep Scan Mode only when explicitly requested.
 8. Produce the first usable artifact:
-   - Rescue Teaching Mode: symbol decoder, question-type map, plain-language template, micro-example, and first practice task.
+   - Rescue Teaching Mode: use `references/rescue-output-patterns.md` for symbol decoders, question-type maps, plain-language templates, micro-examples, and first practice tasks.
    - Sprint Planning Mode: roadmap, priority list, timed plan, condensed notes, and self-test questions.
-9. Iterate with answer checking, weak-point repair, visual cram cards, and a final pre-exam sheet.
+9. Review the output with `references/self-review-rubric.md`, fix critical gaps, then send.
+10. Iterate with answer checking, weak-point repair, visual cram cards, and a final pre-exam sheet.
+
+## Reference Loading
+
+Load only the references needed for the current task:
+
+- `references/rescue-pipeline.md`: load for material piles, vague requests, exam notices, or first-pass triage.
+- `references/rescue-output-patterns.md`: load in Rescue Teaching Mode and when the user says they do not understand.
+- `references/subject-playbooks.md`: load after classifying the course type; use it to choose default artifacts and practice types.
+- `references/self-review-rubric.md`: load before finalizing a substantial answer, generated practice, or wrong-answer repair.
+- `references/evaluation-cases.md`: load only when developing, testing, or updating this skill.
+- `references/pdf-dump-workflow.md`: load for many PDFs/slides/notes at once.
+- `references/course-types.md` and `references/priority-rules.md`: load for classification and priority decisions.
 
 ## Visual and Symbol Rules
 
@@ -101,13 +116,15 @@ When the student may not already understand the material, use this order:
 6. **Now Practice**: name the exact exercises, pages, screenshots, or question types to do next. If exact exercises are unavailable, assign a small 30-90 minute practice task.
 7. **Common Traps**: list only the traps that matter for the detected material.
 
+For detailed reusable layouts, use `references/rescue-output-patterns.md`.
+
 ## Fast PDF Handling
 
 When the user provides PDFs, prefer `scripts/pdf_probe.py` before manual extraction attempts. Use the probe's JSON output to decide whether the file is `text-readable`, `mixed`, `scan-first`, or `unreadable`.
 
 If a PDF has already been probed, reuse cached probe results keyed by file hash when available. Cache diagnostic metadata only by default, not final study advice. Invalidate the cache when the file hash changes; if hashing is unavailable, use file size and modified time as a weak fallback.
 
-In Sprint Mode:
+In Rescue Teaching Mode or Sprint Planning Mode:
 
 - Keep scan-first probing to a short budget, roughly 30-90 seconds.
 - Stop repeated fallback attempts after the probe and one high-value targeted check.
@@ -162,6 +179,7 @@ Choose artifacts that match the user's urgency and current understanding:
 
 - Symbol decoder card
 - Question-type recognition card
+- Rescue skeleton
 - Plain-language topic explanation
 - Do-this-first solution template
 - One worked micro-example

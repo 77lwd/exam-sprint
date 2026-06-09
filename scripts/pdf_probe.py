@@ -2,8 +2,9 @@
 """Fast PDF diagnostic probe for the exam-sprint skill.
 
 This script intentionally does not OCR. It reports whether ordinary PDF text
-extraction is likely enough for Sprint Mode, or whether the material should be
-treated as scan-first and handled with a provisional map or Deep Scan Mode.
+extraction is likely enough for Rescue Teaching Mode, or whether the material
+should be treated as scan-first and handled with a provisional map or Deep Scan
+Mode.
 """
 
 from __future__ import annotations
@@ -74,12 +75,12 @@ def classify(sampled_pages: list[dict[str, Any]]) -> tuple[str, str]:
 
 def recommended_action(status: str) -> tuple[str, str]:
     if status == "text-readable":
-        return "Sprint Mode", "Continue normal text extraction and produce a prioritized sprint artifact."
+        return "Rescue Teaching Mode", "Continue normal text extraction and produce a rescue skeleton plus first usable study artifact."
     if status == "mixed":
-        return "Sprint Mode", "Use readable pages for a first-pass map, then request targeted supplements for unreadable sections."
+        return "Rescue Teaching Mode", "Use readable pages for a first-pass rescue map, then request targeted supplements for unreadable sections."
     if status == "scan-first":
-        return "Sprint Mode", "Produce a provisional material map and request 1-3 high-value supplements; offer Deep Scan Mode if fuller extraction is needed."
-    return "Sprint Mode", "Report limited evidence and request targeted supplements or a clearer source."
+        return "Rescue Teaching Mode", "Produce a provisional material map and request 1-3 high-value supplements; offer Deep Scan Mode if fuller extraction is needed."
+    return "Rescue Teaching Mode", "Report limited evidence and request targeted supplements or a clearer source."
 
 
 def cache_path(cache_dir: Path, sha256: str) -> Path:
@@ -125,7 +126,7 @@ def probe(path: Path, preview_chars: int, cache_dir: Path | None) -> dict[str, A
                 "error": "file_not_found",
                 "status": "unreadable",
                 "confidence": "high",
-                "recommended_mode": "Sprint Mode",
+                "recommended_mode": "Rescue Teaching Mode",
                 "recommended_action": "Ask the user to provide a valid file path or upload the material again.",
             }
         )
@@ -158,7 +159,7 @@ def probe(path: Path, preview_chars: int, cache_dir: Path | None) -> dict[str, A
                 "error_detail": str(exc),
                 "status": "unreadable",
                 "confidence": "low",
-                "recommended_mode": "Sprint Mode",
+                "recommended_mode": "Rescue Teaching Mode",
                 "recommended_action": "Use a minimal material map from file metadata and request targeted supplements.",
             }
         )
@@ -218,7 +219,7 @@ def probe(path: Path, preview_chars: int, cache_dir: Path | None) -> dict[str, A
                 "error_detail": str(exc),
                 "status": "unreadable",
                 "confidence": "low",
-                "recommended_mode": "Sprint Mode",
+                "recommended_mode": "Rescue Teaching Mode",
                 "recommended_action": "Report the read failure and request high-value supplements or a clearer export.",
             }
         )

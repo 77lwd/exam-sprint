@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.3 - 2026-06-09
+
+### Added
+
+- Added a lightweight rescue pipeline inspired by production exam-prep workflows: material evidence -> rescue skeleton -> symbol and question-type cards -> practice task -> answer checking and repair.
+- Added `references/rescue-pipeline.md` to define the first-pass artifact chain and rescue skeleton contract.
+- Added `references/rescue-output-patterns.md` with reusable layouts for material-first packs, symbol decoders, question-type cards, micro-examples, and wrong-answer repair.
+- Added `references/subject-playbooks.md` to choose different rescue artifacts for calculation, conceptual, memorization, practical, language, and open-ended courses.
+- Added `references/self-review-rubric.md` for zero-baseline readability, first-action, practice-task, scope, and visual-load checks.
+- Added `references/evaluation-cases.md` for future skill testing and regression checks.
+
+### Changed
+
+- Updated `SKILL.md` to load references selectively instead of relying on one large instruction body.
+- Updated the default workflow to build a rescue skeleton before producing notes or plans.
+- Updated `pdf_probe.py` recommendations to use Rescue Teaching Mode terminology.
+
 ## 1.2 - 2026-06-09
 
 ### Changed
