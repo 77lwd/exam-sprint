@@ -13,6 +13,7 @@ An output fails if any critical item is missing.
 - **Symbol decoding before formulas**: Explains at least `X`, `Xi`, `n`, `Xbar`, `theta`, `hat theta`, `L(theta)`, and MLE in plain language before relying on them.
 - **Concrete first action**: Gives the first line or first decision for at least one Chapter 7 estimation question type.
 - **Practice task**: Gives a concrete 30-90 minute first task tied to visible Chapter 6/7 exercises or clearly named generated mini drills.
+- **Task board**: Gives 3-5 task cards when visible pages/exercises exist, including source, why now, first line/decision, stop point, and self-check.
 - **Minimal questions**: Asks only for exam time/study hours, exam format, and target outcome after giving useful content.
 
 ## Strong Output Criteria
@@ -33,6 +34,7 @@ A strong output should satisfy most of these.
 - `symbol_gap`: uses `Xbar`, `theta`, `MLE`, likelihood, or sample statistic without plain-language decoding.
 - `scope_gap`: treats deleted topics as main priorities or predicts unobserved topics as certain.
 - `practice_gap`: gives advice but no exact first practice target.
+- `task_board_gap`: stays at topic or chapter level even though visible exercises/pages exist.
 - `start_gap`: student still does not know what to write first on an estimation problem.
 - `visual_gap`: table or diagram is dense with unexplained notation.
 - `answer_suspect`: an estimator formula, variance formula, or MLE boundary argument is mathematically wrong.

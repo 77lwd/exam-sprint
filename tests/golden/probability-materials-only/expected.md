@@ -21,6 +21,14 @@ The exact wording may vary, but a passing answer should preserve this structure,
 | Maximum likelihood estimation | Must rescue | It appears in examples and exercises and is calculation-heavy. | Build `L(theta)` as a product, take `ln L` if useful, differentiate or use boundary constraints. | Chapter 7 examples 6-8, exercises 7-1, Comprehensive Training A. | Proof-heavy derivations beyond the exercise template. |
 | Unbiasedness, efficiency, consistency | High yield for choices | These are likely choice/multiple-choice definitions. | Decode each as expectation equals target, smaller variance among unbiased estimators, convergence as sample size grows. | Chapter 7 section 7.2 and exercises 7-2. | Full theorem proofs unless the user asks. |
 
+## Task Board: Open These First
+
+| Order | Source | What To Do | Why This Comes First | First Line / First Decision | Stop Point | Self-Check |
+|---|---|---|---|---|---|---|
+| 1 | `第七章.pdf`, page 27, exercise 7-1 question 5 | Do only the setup for both method of moments and MLE. | This visible exercise asks for both estimates from one distribution table, so it trains the highest-yield Chapter 7 calculation pattern. | First read the table as `P(X=0)=theta^2`, `P(X=1)=2theta(1-theta)`, `P(X=2)=theta^2`, `P(X=3)=1-2theta`; then count how many sample values are 0, 1, 2, and 3. | Stop after writing the sample mean and the likelihood product by counts. | The probabilities in the likelihood should use exponents equal to the observed counts, not just appear once. |
+| 2 | `第六章新.pdf`, page 42, comprehensive training question 4 | Compute the population mean/variance and the sampling distribution of the sample mean for sample size 2. | This visible task trains mean, variance, and sample mean distribution, which are explicitly kept by the exam notice. | First list all possible samples of size 2 according to the sampling rule; then write the sample mean for each. | Stop after the list of possible sample means and their probabilities. | The average of the sample-mean distribution should match the population mean. |
+| 3 | `第六章新.pdf`, visible Chapter 6 exercises 6-1/6-2 or fallback if the exact page is unreadable | Do one statistic-vs-not-statistic check. | Choice questions can ask whether an expression is a statistic, and this is fast to rescue. | First decision: does the expression contain an unknown population parameter? If yes, mark it as not a statistic. | Stop after classifying 3 expressions. | A statistic can use sample data and known constants, but not an unknown parameter. |
+
 ## Start Here: Parameter Estimation
 
 ### What This Topic Is Testing
@@ -70,10 +78,10 @@ Problem type: `X ~ U[0, theta]`; estimate `theta`.
 
 ### Now Practice: First 60-75 Minutes
 
-1. Spend 10 minutes copying the symbol decoder above onto paper and rewriting each symbol in your own words.
-2. Spend 25 minutes on Chapter 7: do exercise 7-1 question 1 or the `U[0, theta]` Comprehensive Training A question if available. For each, force yourself to write both method-of-moments and MLE first lines.
-3. Spend 20 minutes on Chapter 6: do one “is this a statistic?” question and one sample mean/sample variance question.
-4. Spend 10 minutes checking only the first broken step: wrong formula, wrong symbol meaning, or wrong scope.
+1. Spend 10 minutes copying only the symbols needed for Task 1: `X`, `xi`, `n`, `theta`, `L(theta)`, and `MLE`.
+2. Spend 25 minutes on `第七章.pdf` page 27, exercise 7-1 question 5. Do not try to finish everything at once; first write the counts and likelihood product.
+3. Spend 25 minutes on `第六章新.pdf` page 42, comprehensive training question 4. Stop after listing sample means and probabilities.
+4. Spend 10 minutes checking only the first broken step: wrong probability from the table, wrong count exponent, missing sample mean, or unknown parameter used inside a statistic.
 
 ## Questions To Ask After The Useful First Pass
 

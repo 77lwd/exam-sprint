@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.5 - 2026-06-09
+
+### Changed
+
+- Shifted first-pass material outputs from chapter-level rescue packs toward task-level rescue boards.
+- Added a required Task Board contract for materials with visible pages, examples, exercises, screenshots, or past-paper items.
+- Updated the rescue pipeline and self-review rubric to flag `task_board_gap` when an answer stays at topic level despite visible task evidence.
+- Updated the probability golden expected output and example to name exact tasks, including `第七章.pdf` page 27 exercise 7-1 question 5 and `第六章新.pdf` page 42 comprehensive training question 4.
+
+### Added
+
+- Added an evaluation case for user feedback that a topic-level answer is not useful.
+
 ## 1.4 - 2026-06-09
 
 ### Added

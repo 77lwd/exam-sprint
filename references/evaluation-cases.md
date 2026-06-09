@@ -10,6 +10,7 @@ Pass criteria:
 - Does not invent a 3-day or 7-day plan.
 - Extracts explicit exam signals first.
 - Produces a rescue skeleton with 3-8 units.
+- Produces a 3-5 item task board when examples/exercises/pages are visible.
 - Gives one first 30-90 minute task.
 - Asks for exam time, format, and target only after giving a useful first pass.
 
@@ -76,3 +77,15 @@ Pass criteria:
 - Does not invent a schedule when study time is unknown.
 - Starts with symbol decoding and question-type templates, especially method of moments and maximum likelihood estimation.
 - Gives a concrete 30-90 minute first task tied to visible exercises.
+- Includes exact task cards for visible evidence such as Chapter 7 page 27 exercise 7-1 question 5 and Chapter 6 visible comprehensive-training/sample-statistic exercises when available.
+
+## Case 8: Materials Feel Useless Without Task-Level Guidance
+
+User gives an exam notice and partial chapter PDFs, then says the first output is not useful because it only gives topic-level advice.
+
+Pass criteria:
+- Acknowledges the gap without defending the previous answer.
+- Rewrites the answer around a task board, not a bigger summary.
+- Names exact pages, exercises, screenshots, or generated fallback drills.
+- Explains what cannot be task-grounded from the current material and requests only the smallest missing supplement.
+- Avoids broad statements such as "review the chapter" unless attached to a concrete task.

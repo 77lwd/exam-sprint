@@ -1,4 +1,4 @@
 interface:
   display_name: "期末突击复习助手"
   short_description: "把课件、考试说明和题目转成零基础可用的题型上手卡、速记图、练习任务和冲刺路线。"
-  default_prompt: "用 exam-sprint 帮我看这些期末材料，先让我快速看懂重点题型并知道现在该做什么。"
+  default_prompt: "用 $exam-sprint 帮我看这些期末材料，先给我能直接打开去做的题目级任务卡。"

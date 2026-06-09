@@ -10,6 +10,7 @@ Fix the answer before sending if any item fails.
 - **No invented timeline**: if exam time is unknown, the answer gives only a first 30-90 minute task and asks for timing.
 - **First action exists**: the student knows the first line, first decision, or first task to do.
 - **Practice is concrete**: exercises, pages, screenshots, or a generated mini drill are named.
+- **Task board exists for materials**: when source materials include visible exercises, examples, pages, or past questions, the answer includes 3-5 task cards with source, why now, first line/decision, stop point, and self-check.
 - **Scope is grounded**: claims about likely topics are tied to teacher notice, past papers, visible materials, assignments, or clearly marked assumptions.
 - **Visuals reduce load**: tables or diagrams do not hide unexplained symbols or require sideways scanning.
 
@@ -31,6 +32,7 @@ Use these labels when reviewing your own output or repairing a generated artifac
 - `symbol_gap`: a necessary symbol or acronym was not explained.
 - `start_gap`: the student still does not know what to write first.
 - `practice_gap`: no concrete practice task was assigned.
+- `task_board_gap`: materials contained visible task evidence, but the answer stayed at chapter/topic level.
 - `scope_gap`: the answer predicts too much without material evidence.
 - `visual_gap`: a table or diagram increases cognitive load.
 - `overplan`: scheduling appears before the student can act.
@@ -43,6 +45,7 @@ Use these labels when reviewing your own output or repairing a generated artifac
 If a critical check fails, do not apologize at length. Patch the output:
 
 1. Add the missing decoder, first action, or practice task.
-2. Cut broad planning if timing is unknown.
-3. Mark uncertain parts as low confidence.
-4. Ask only the one missing question that changes the next step.
+2. Add or tighten the task board. If exact source tasks are unavailable, label fallback drills and request the smallest missing supplement.
+3. Cut broad planning if timing is unknown.
+4. Mark uncertain parts as low confidence.
+5. Ask only the one missing question that changes the next step.

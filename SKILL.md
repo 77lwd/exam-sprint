@@ -7,7 +7,7 @@ description: Emergency university exam preparation and final-exam sprint support
 
 ## Version
 
-Current version: 1.4
+Current version: 1.5
 
 ## Purpose
 
@@ -25,6 +25,9 @@ Help university students quickly understand incomplete, messy course materials w
 - When a symbol, acronym, or technical term first appears, explain it in plain language before using it as a formula shortcut.
 - When exam time is unknown, do not invent a 24-hour, 3-day, or 7-day route. Give a first 30-90 minute rescue task and ask for the missing time information.
 - Prefer "what to do now" over broad advice: name the question type, the first line to write, the template to apply, and the exact practice target when available.
+- Convert material piles into page/task-level actions by default. If readable evidence exposes page numbers, exercise numbers, examples, or screenshots, name the exact page or question before giving general advice.
+- Do not stop at chapter-level recommendations such as "review Chapter 7" or "practice MLE". Produce concrete task cards: where to open, what to attempt, why this task comes first, the first line to write, and how to self-check.
+- If the available material does not expose enough question-level evidence, say that clearly and request the smallest missing supplement needed to create task cards, such as 2-3 clear exercise screenshots, an answer key, or the relevant PPT pages.
 - Convert materials into a rescue artifact chain: material evidence -> rescue skeleton -> symbol and question-type cards -> practice task -> answer checking and repair.
 - Self-review substantial outputs from a zero-baseline student perspective before sending.
 - Do not spend several minutes recovering difficult files unless the user asks for fuller extraction or confirms a mode switch.
@@ -36,6 +39,7 @@ Use **Rescue Teaching Mode** by default.
 - Goal: help the student rapidly understand enough to begin solving likely exam questions.
 - Use when the user provides materials without a clear request, says they do not understand, asks to cram, or has not provided remaining study time.
 - First output should favor symbol decoding, human-language explanations, question-type recognition, worked micro-examples, and the next small practice task.
+- First output from materials should include a **Task Board** before or immediately after the material signal: 3-5 concrete tasks when evidence allows, each tied to a page, exercise, screenshot, visible example, or generated fallback drill.
 - Do not lead with a multi-day plan unless the user asked for planning or gave the remaining study time.
 - Keep explanations concrete and short: "what this means", "what the examiner wants", "what to write first", "what to avoid".
 
@@ -67,16 +71,21 @@ Offer a concise two-option choice: continue Rescue Teaching Mode for a fast prov
 3. Build a rescue skeleton from titles, sections, repeated terms, formulas, examples, diagrams, summaries, assignments, or past questions. See `references/rescue-pipeline.md`.
 4. Classify the course by exam-scoring type. See `references/course-types.md`, then choose the matching rescue style from `references/subject-playbooks.md`.
 5. Rank topics by sprint priority. See `references/priority-rules.md`.
-6. Ask only essential missing questions: exam time, exam format, and target outcome.
-7. Choose the right output mode:
+6. Convert the top rescue units into a Task Board:
+   - Prefer 3-5 tasks.
+   - Each task must name a page, exercise, visible example, screenshot, or generated mini drill.
+   - Each task must include: why this task, first line/first decision, stop point, and self-check.
+   - If exact source tasks are unavailable, mark generated drills as fallback and ask for the smallest supplement that would replace them.
+7. Ask only essential missing questions: exam time, exam format, and target outcome.
+8. Choose the right output mode:
    - Rescue Teaching Mode when the user seems unprepared, asks vaguely, or has not provided remaining time.
    - Sprint Planning Mode when the user gives remaining time or asks for scheduling.
    - Deep Scan Mode only when explicitly requested.
-8. Produce the first usable artifact:
-   - Rescue Teaching Mode: use `references/rescue-output-patterns.md` for symbol decoders, question-type maps, plain-language templates, micro-examples, and first practice tasks.
+9. Produce the first usable artifact:
+   - Rescue Teaching Mode: use `references/rescue-output-patterns.md` for task boards, task cards, symbol decoders, question-type maps, plain-language templates, micro-examples, and first practice tasks.
    - Sprint Planning Mode: roadmap, priority list, timed plan, condensed notes, and self-test questions.
-9. Review the output with `references/self-review-rubric.md`, fix critical gaps, then send.
-10. Iterate with answer checking, weak-point repair, visual cram cards, and a final pre-exam sheet.
+10. Review the output with `references/self-review-rubric.md`, fix critical gaps, then send.
+11. Iterate with answer checking, weak-point repair, visual cram cards, and a final pre-exam sheet.
 
 ## Reference Loading
 
@@ -113,7 +122,7 @@ When the student may not already understand the material, use this order:
 3. **Question-Type Recognition**: show how to recognize the likely question type from wording or formulas.
 4. **Do-This Template**: give the shortest reliable steps for the question type.
 5. **One Micro-Example**: solve or partially solve one small example using the same template.
-6. **Now Practice**: name the exact exercises, pages, screenshots, or question types to do next. If exact exercises are unavailable, assign a small 30-90 minute practice task.
+6. **Now Practice**: name the exact exercises, pages, screenshots, or question types to do next. If exact exercises are unavailable, assign a small 30-90 minute fallback drill and ask for the smallest missing material needed to make it source-grounded.
 7. **Common Traps**: list only the traps that matter for the detected material.
 
 For detailed reusable layouts, use `references/rescue-output-patterns.md`.
@@ -137,6 +146,7 @@ For scan-first or mostly unreadable PDFs, produce a provisional material map ins
 - Visible evidence: only the pages, headings, keywords, or question types actually detected.
 - Preliminary module map: 4-8 coarse modules, clearly marked provisional.
 - Suspected high-yield topics: focus on sprint value and visible evidence.
+- Task Board status: exact source tasks found, fallback drills needed, or blocked until screenshots/OCR are provided.
 - Missing evidence: directory, teacher emphasis, answer key, large-question pages, point structure, or past papers.
 - Next best action: request only 1-3 high-value supplements.
 
@@ -185,6 +195,8 @@ Choose artifacts that match the user's urgency and current understanding:
 - One worked micro-example
 - Visual cram card, compact table, or readable mini flowchart
 - First 30-90 minute rescue task when exam time is unknown
+- Task board with 3-5 source-grounded task cards
+- Page-level or exercise-level first actions
 - Material inventory and course structure map
 - Topic priority table
 - Formula, definition, keyword, or process checklist with plain-language labels
@@ -206,4 +218,5 @@ Use simple confidence labels:
 - Do not promise score outcomes.
 - Do not fabricate teacher-specific exam predictions.
 - Do not generate huge exhaustive notes when a prioritized plan would help more.
+- Do not give only chapter-level or topic-level practice advice when page-level or exercise-level evidence is visible.
 - Do not rely on web search unless the user asks or local materials are insufficient and current external facts are genuinely needed.

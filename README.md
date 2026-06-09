@@ -1,6 +1,6 @@
 # Exam Sprint
 
-Version: 1.4
+Version: 1.5
 
 Exam Sprint is a Codex skill for university final-exam rescue work. It turns lecture PDFs, notes, past papers, assignments, teacher-highlighted topics, and screenshots into zero-baseline-friendly question-type explanations, symbol decoders, visual cram cards, concrete practice tasks, wrong-answer repair, and sprint plans when planning is actually needed.
 
@@ -16,6 +16,13 @@ The default goal is not just to arrange study time. It is to help a student who 
 - Produces sprint plans only when the user gives remaining time or explicitly asks for scheduling.
 - Supports answer checking, mistake analysis, and weak-point repair after the student attempts questions.
 - Quickly probes PDFs so scanned or mixed files do not trap the workflow in long OCR attempts by default.
+
+## Version 1.5 Highlights
+
+- Shifted first-pass material outputs from broad rescue packs to concrete task boards.
+- Added a task-card contract: source, why this task, first line or first decision, stop point, and self-check.
+- Updated the probability golden case to name exact source tasks such as Chapter 7 page 27 exercise 7-1 question 5 and Chapter 6 page 42 comprehensive training question 4.
+- Added a regression case for when users say the output is not useful because it stayed at topic level.
 
 ## Version 1.4 Highlights
 

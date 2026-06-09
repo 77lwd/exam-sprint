@@ -16,6 +16,13 @@ Rescue Units
 | Unit | Why It Matters | First Action | Practice Source | Skip For Now |
 |---|---|---|---|---|
 
+Task Board
+| Do First | Source | Why This One | First Line / First Decision | Stop And Check |
+|---|---|---|---|---|
+| 1 | file/page/exercise | ... | ... | ... |
+| 2 | file/page/exercise | ... | ... | ... |
+| 3 | file/page/exercise or fallback drill | ... | ... | ... |
+
 Start Here
 1. Topic:
 2. Plain meaning:
@@ -30,6 +37,26 @@ I Need From You
 ```
 
 Do not include a multi-day plan unless remaining time is known.
+
+## Pattern A2: Task Board Contract
+
+Use this whenever materials expose exercises, examples, pages, worksheets, screenshots, or past-paper items. The task board is the student's real starting point.
+
+```text
+Task Board: Open These First
+| Order | Source | What To Do | Why This Comes First | First Line / First Decision | Stop Point | Self-Check |
+|---|---|---|---|---|---|---|
+| 1 | ... | ... | ... | ... | ... | ... |
+| 2 | ... | ... | ... | ... | ... | ... |
+| 3 | ... | ... | ... | ... | ... | ... |
+```
+
+Rules:
+- Prefer exact source tasks over broad topics.
+- Include page number, exercise number, or screenshot identifier whenever visible.
+- If no exact task can be extracted, mark the item as `fallback drill` and ask for the smallest missing supplement.
+- Do not say only "practice Chapter 7" when a visible page or exercise is available.
+- The first task should be doable in 10-25 minutes, not a full chapter review.
 
 ## Pattern B: Symbol Decoder Card
 

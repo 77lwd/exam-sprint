@@ -22,6 +22,14 @@ I can already use these materials for a first rescue pass, but I should not pret
 | Maximum likelihood estimation | Must rescue | Pick the parameter that makes the sample most plausible. | “Write the likelihood `L(theta)` as a product.” |
 | Unbiased/effective/consistent | High yield | Choice and multiple-choice concepts. | “Unbiased means the estimator’s expectation equals the target.” |
 
+## Task Board: Open These First
+
+| Order | Source | What To Do | Why This Comes First | First Line / First Decision | Stop And Check |
+|---|---|---|---|---|---|
+| 1 | `第七章.pdf`, page 27, exercise 7-1 question 5 | Set up the method-of-moments and MLE solution. | It visibly asks for both major Chapter 7 estimation methods in one task. | Count the sample values 0, 1, 2, and 3, then write the probability table in plain text. | Stop after the likelihood product; check that each exponent equals a count. |
+| 2 | `第六章新.pdf`, page 42, comprehensive training question 4 | Work out population mean/variance and sample-mean distribution. | It trains mean, variance, and moments, which the notice keeps. | First list the possible samples of size 2 and their sample means. | Stop when the sample-mean distribution is listed. |
+| 3 | Chapter 6 visible exercises 6-1/6-2, or a clear screenshot if the page is unreadable | Classify expressions as statistics or not statistics. | This is a fast choice-question rescue task. | First ask: does the expression include an unknown parameter? | Stop after 3 expressions and send them back if unsure. |
+
 ## Start Here: Estimating A Parameter
 
 This is probably the fastest Chapter 7 score gain because the template repeats across Bernoulli, exponential, normal, uniform, and discrete distribution exercises.
@@ -73,10 +81,10 @@ Maximum likelihood:
 
 For the next 60-75 minutes:
 
-1. Copy the symbol decoder and rewrite each symbol in Chinese plain language.
-2. Do one Chapter 7 method-of-moments question and force the first line: “theoretical moment = sample moment.”
-3. Do one Chapter 7 MLE question and force the first line: “`L(parameter) = product of probabilities/densities`.”
-4. Do one Chapter 6 statistic-identification question: cross out any expression containing an unknown parameter.
+1. Copy only the symbols needed for Task 1: `X`, `xi`, `n`, `theta`, `L(theta)`, and `MLE`.
+2. Open `第七章.pdf` page 27 and do exercise 7-1 question 5. First count the observed values and write the likelihood product.
+3. Open `第六章新.pdf` page 42 and do comprehensive training question 4. First list all possible sample means.
+4. Do one Chapter 6 statistic-identification task from exercises 6-1/6-2, or send a screenshot if the exact expressions are not readable.
 5. Stop and check only the first broken step, not the whole chapter.
 
 I still need three things to make the next pass sharper: how many hours remain, whether the exam is closed-book/open-book, and whether your goal is passing, stable score, or high score.
