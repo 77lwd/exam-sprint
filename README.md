@@ -1,25 +1,37 @@
 # Exam Sprint
 
-Version: 1.1
+Version: 1.2
 
-Exam Sprint 是一个面向大学期末突击复习的 Codex skill。它把课件 PDF、课堂笔记、往年题、作业、老师划重点和零散截图整理成可执行的复习路线、考点优先级、速记清单和自测陪练。
+Exam Sprint is a Codex skill for university final-exam rescue work. It turns lecture PDFs, notes, past papers, assignments, teacher-highlighted topics, and screenshots into zero-baseline-friendly question-type explanations, symbol decoders, visual cram cards, concrete practice tasks, wrong-answer repair, and sprint plans when planning is actually needed.
+
+The default goal is not just to arrange study time. It is to help a student who may not understand the material yet quickly recognize what a problem is asking, what the symbols mean, what first step to write, and which small task to do next.
 
 ## What It Does
 
-- 盘点课程材料并识别课程模块。
-- 按考试得分方式分类课程，例如计算推导、概念理解、记忆背诵、实践技能、语言表达和开放综合。
-- 按考试可能性、分值、提分效率、前置价值和材料证据排序考点。
-- 输出 24 小时、3 天、7 天或自定义周期的冲刺计划。
-- 生成一页速记、公式/定义/流程清单、自测题和错题修复路线。
-- 在扫描版 PDF 场景下优先快速诊断，避免默认长时间卡在 OCR 或文件恢复上。
+- Inventories course materials and identifies likely course modules.
+- Detects exam-scoring style, such as calculation, conceptual explanation, memorization, practical skills, language work, or open-ended synthesis.
+- Ranks topics by score gain under time pressure: exam likelihood, point value, learnability, prerequisite value, and material evidence.
+- Defaults to Rescue Teaching Mode: symbol decoding, question-type recognition, plain-language templates, micro-examples, and first practice tasks.
+- Uses compact tables, vertical step cards, readable mini flowcharts, and visual cram cards when they reduce cognitive load.
+- Produces sprint plans only when the user gives remaining time or explicitly asks for scheduling.
+- Supports answer checking, mistake analysis, and weak-point repair after the student attempts questions.
+- Quickly probes PDFs so scanned or mixed files do not trap the workflow in long OCR attempts by default.
+
+## Version 1.2 Highlights
+
+- Changed the default behavior from planning-first Sprint Mode to Rescue Teaching Mode.
+- Added rules requiring symbols, abbreviations, formulas, and technical terms to be explained in plain language before use.
+- Added visual-output guidance for compact tables, step cards, question-type maps, mini flowcharts, and visual cram cards.
+- Added first-pass rescue tasks for cases where exam time is unknown.
+- Updated the skill UI prompt to emphasize understanding key question types and knowing what to do next before building a schedule.
 
 ## Version 1.1 Highlights
 
-- 新增 Sprint Mode 和 Deep Scan Mode。
-- 新增扫描版 PDF 的快速处理规则。
-- 新增 `scripts/pdf_probe.py`，用于快速判断 PDF 是可读文本、混合版、扫描优先还是不可读。
-- 新增 provisional 材料地图输出策略，证据不足时先给可用战况板，再请求 1-3 个高价值补料。
-- 新增可选 probe 缓存，方便反复测试同一份 PDF。
+- Added Sprint Mode and Deep Scan Mode.
+- Added fast PDF handling rules for scanned and mixed PDFs.
+- Added `scripts/pdf_probe.py` to quickly classify PDFs as text-readable, mixed, scan-first, or unreadable.
+- Added provisional material maps when evidence is limited.
+- Added optional probe caching for repeated testing on the same PDF.
 
 See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
@@ -60,4 +72,4 @@ exam-sprint/
 
 ## Notes
 
-Exam Sprint 优先使用用户提供的课程材料。内置 references 只提供复习方法论，不替代具体课程资料，也不承诺考试分数。
+Exam Sprint uses the user's course materials as the primary source. The bundled references provide sprint methods and prioritization rules; they do not replace course-specific materials or promise exam scores.
