@@ -65,3 +65,14 @@ Pass criteria:
 - No unexplained symbols appear in the question.
 - Answer key and pitfalls are held back if the user asks to drill first.
 - If answers are provided, they are checked for ambiguity and scope.
+
+## Case 7: Probability Materials Only Golden Case
+
+Use `tests/golden/probability-materials-only/` and `examples/probability-rescue-first-pass.md` when validating the real Chapter 6/7 probability rescue workflow.
+
+Pass criteria:
+- Uses the exam notice as the strongest source signal.
+- Treats the two PDFs as mixed-readable rather than fully extracted.
+- Does not invent a schedule when study time is unknown.
+- Starts with symbol decoding and question-type templates, especially method of moments and maximum likelihood estimation.
+- Gives a concrete 30-90 minute first task tied to visible exercises.

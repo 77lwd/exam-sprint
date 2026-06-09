@@ -7,7 +7,7 @@ description: Emergency university exam preparation and final-exam sprint support
 
 ## Version
 
-Current version: 1.3
+Current version: 1.4
 
 ## Purpose
 
@@ -86,7 +86,7 @@ Load only the references needed for the current task:
 - `references/rescue-output-patterns.md`: load in Rescue Teaching Mode and when the user says they do not understand.
 - `references/subject-playbooks.md`: load after classifying the course type; use it to choose default artifacts and practice types.
 - `references/self-review-rubric.md`: load before finalizing a substantial answer, generated practice, or wrong-answer repair.
-- `references/evaluation-cases.md`: load only when developing, testing, or updating this skill.
+- `references/evaluation-cases.md`: load only when developing, testing, or updating this skill. For concrete regression fixtures, inspect `tests/golden/` and `examples/` in the repository when available.
 - `references/pdf-dump-workflow.md`: load for many PDFs/slides/notes at once.
 - `references/course-types.md` and `references/priority-rules.md`: load for classification and priority decisions.
 

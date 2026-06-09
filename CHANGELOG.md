@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.4 - 2026-06-09
+
+### Added
+
+- Added `tests/golden/probability-materials-only/input.md` for a real materials-only probability exam rescue case.
+- Added `tests/golden/probability-materials-only/expected.md` with a canonical Rescue Teaching Mode first pass.
+- Added `tests/golden/probability-materials-only/rubric.md` to catch overplanning, symbol gaps, scope gaps, and missing concrete practice.
+- Added `examples/probability-rescue-first-pass.md` as a readable reference answer for Chapter 6/7 probability materials.
+
+### Changed
+
+- Updated `references/evaluation-cases.md` to point to the new probability golden fixture.
+- Updated `SKILL.md` version metadata to 1.4 and noted that golden fixtures/examples should be inspected during skill development.
+
 ## 1.3 - 2026-06-09
 
 ### Added

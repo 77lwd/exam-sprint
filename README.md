@@ -1,6 +1,6 @@
 # Exam Sprint
 
-Version: 1.3
+Version: 1.4
 
 Exam Sprint is a Codex skill for university final-exam rescue work. It turns lecture PDFs, notes, past papers, assignments, teacher-highlighted topics, and screenshots into zero-baseline-friendly question-type explanations, symbol decoders, visual cram cards, concrete practice tasks, wrong-answer repair, and sprint plans when planning is actually needed.
 
@@ -16,6 +16,13 @@ The default goal is not just to arrange study time. It is to help a student who 
 - Produces sprint plans only when the user gives remaining time or explicitly asks for scheduling.
 - Supports answer checking, mistake analysis, and weak-point repair after the student attempts questions.
 - Quickly probes PDFs so scanned or mixed files do not trap the workflow in long OCR attempts by default.
+
+## Version 1.4 Highlights
+
+- Added the first real golden regression case for probability materials-only rescue work.
+- Added a canonical expected first pass that starts with material evidence, symbol decoding, question-type templates, and a concrete first practice task.
+- Added a rubric to catch common failures such as overplanning, unexplained notation, weak source grounding, and missing practice.
+- Added a user-facing probability rescue example for Chapter 6/7 materials.
 
 ## Version 1.3 Highlights
 
@@ -70,6 +77,8 @@ exam-sprint/
   CHANGELOG.md
   agents/
     openai.yaml
+  examples/
+    probability-rescue-first-pass.md
   references/
     course-types.md
     evaluation-cases.md
@@ -81,6 +90,12 @@ exam-sprint/
     subject-playbooks.md
   scripts/
     pdf_probe.py
+  tests/
+    golden/
+      probability-materials-only/
+        input.md
+        expected.md
+        rubric.md
 ```
 
 ## Notes
